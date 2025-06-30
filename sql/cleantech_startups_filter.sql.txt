@@ -1,0 +1,11 @@
+-- cleantech_startups_filter.sql
+-- Get startups in CleanTech-related sectors
+
+SELECT *
+FROM startups
+WHERE industry LIKE '%clean%'
+   OR industry LIKE '%energy%'
+   OR industry LIKE '%green%'
+   OR industry LIKE '%renewable%'
+   OR industry LIKE '%sustainab%'
+ORDER BY "Total Funding ($M)" DESC;
